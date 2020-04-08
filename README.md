@@ -1,11 +1,11 @@
 ![hemerodrome logo](pheidippides.png)
 
 # Hemerodrome
-Hemerodrome is a lightweight process runner for Windows and POSIX platforms.
-It supports launching new processes (as a child, or replacing the caller), 
+Hemerodrome is a small, lightweight, process runner for Windows and POSIX platforms.
+It supports running new processes (as a child, or replacing the caller), 
 returning a PID (Process ID), waiting for termination (with a timeout) and forced termination.
 
-It does not support advanced features such as stream stdout.
+It does not support advanced features such as streaming stdout or other forms of interprocess communication.
 For a fully fledged process runner, see something like [Boost.Process](https://www.boost.org/doc/libs/1_72_0/doc/html/process.html).
 
 ## What does the name mean?
