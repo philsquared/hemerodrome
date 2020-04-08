@@ -1,3 +1,5 @@
+![hemerodrome logo](pheidippides.png)
+
 # Hemerodrome
 Hemerodrome is a lightweight process runner for Windows and POSIX platforms.
 It supports launching new processes (as a child, or replacing the caller), 
