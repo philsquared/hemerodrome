@@ -17,5 +17,10 @@ gave name to the modern long distance race.
 Pheidippides, and others like him, were "pro" runners of their day,
 so Hemerodrome seemed a fitting name. Plus it sounds mysterious and slightly cool.
 
+## Status
 
+This project is just getting started.
+The Windows part hasn't been written at all yet - and the interface will likely change.
+
+So feel free to try it out - but don't use it in any production code (or even long lasting toy code) yet. 
  
