@@ -17,14 +17,14 @@ int main( int argc, char* argv[] ) {
 
         // Launch the child process
         std::cout << "Executing process: " << argv[1] << "\n";
-        hemerodrome::Process p(argv[1], args, hemerodrome::ForkBehaviour::DontFork );
+        hemerodrome::Process p( argv[1], args, hemerodrome::ForkBehaviour::DontFork );
 
         // If we got here with no exceptions then we have a child process running
         std::cout << "child process started with ID: " << p.pid() << "\n";
 
         // Now wait, in a sleepy loop, for the child to finish
         while( true ) {
-            auto result = p.wait_for(std::chrono::seconds(1) );
+            auto result = p.wait_for( std::chrono::seconds(1) );
             if( result ) {
                 std::cout << "Child process exited with code: " << *result << "\n";
                 break;

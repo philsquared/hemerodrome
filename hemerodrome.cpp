@@ -10,14 +10,14 @@
 namespace hemerodrome {
 
     namespace {
-        void throw_errno(std::string const &context) {
-            std::error_code ec(errno, std::system_category());
-            throw std::system_error(ec, context);
+        void throw_errno( std::string const &context ) {
+            std::error_code ec( errno, std::system_category() );
+            throw std::system_error( ec, context );
         }
     }
 
-    Process::Process(std::string const& exeName, std::vector<std::string> args, ForkBehaviour forkBehaviour )
-    : m_pid(forkBehaviour == ForkBehaviour::Fork ? fork() : 0 )
+    Process::Process( std::string const& exeName, std::vector<std::string> args, ForkBehaviour forkBehaviour )
+    : m_pid( forkBehaviour == ForkBehaviour::Fork ? fork() : 0 )
     {
         if( m_pid == 0 ) {
             // child process or unforked main process
@@ -28,7 +28,7 @@ namespace hemerodrome {
             cargs.push_back( const_cast<char*>( exeName.c_str() ) );
             for( auto const& arg : args )
                 cargs.push_back( const_cast<char*>( arg.c_str() ) );
-            cargs.push_back(nullptr );
+            cargs.push_back( nullptr );
 
             execv( exeName.c_str(), &cargs[0] );
 
