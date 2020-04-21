@@ -4,10 +4,10 @@
 
 // This test front end just executes the process supplied as the first argument,
 // forwarding any subsequent arguments to it
-//int main( int argc, char* argv[] ) {
-int main() {
-    int argc = 2;
-    std::vector<char*> argv = { "", "C:\\Users\\phil\\source\\repos\\LazyTest\\Debug\\LazyTest.exe" };
+int main( int argc, char* argv[] ) {
+//int main() {
+//    int argc = 2;
+//    std::vector<char*> argv = { "", "C:\\Users\\phil\\source\\repos\\LazyTest\\Debug\\LazyTest.exe" };
 
     try {
         if( argc < 2 )
