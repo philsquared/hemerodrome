@@ -84,7 +84,8 @@ namespace hemerodrome {
 
 #elif defined (HEMERODROME_PLATFORM_WINDOWS)
 
-#include "windows.h" // !TBD lean & mean?
+#define WIN32_LEAN_AND_MEAN
+#include "windows.h"
 
 namespace {
     [[noreturn]]
@@ -121,8 +122,6 @@ namespace hemerodrome {
 
                 throw_last_error( "creating process" );
             }
-
-            m_pid = m_procInfo.dwProcessId;
         }
 
         ~WindowsProcess() {

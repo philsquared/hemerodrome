@@ -5,6 +5,7 @@
 #include <vector>
 #include <optional>
 #include <chrono>
+#include <memory>
 
 #ifdef __APPLE__
 # include <TargetConditionals.h>
